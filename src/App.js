@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect, useState  } from 'react';
 import { Nutrition } from './Nutrition';
 import { LoaderPage } from './LoaderPage';
