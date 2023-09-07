@@ -1,6 +1,8 @@
 import { useEffect, useState  } from 'react';
 import { Nutrition } from './Nutrition';
 import { LoaderPage } from './LoaderPage';
+import './App'
+import video from './orange.mp4';
 
 
 function App() {
@@ -10,8 +12,9 @@ function App() {
   const [myNutrition, setMyNutrition] = useState();
   const [stateLoader, setStateLoader] = useState(false);
 
-  const MY_ID = "772db164";
-  const MY_KEY = "11a222d50b71db5a2dbcaed2cbce118a";
+  
+  const MY_ID = "dc43f5c9";
+  const MY_KEY = "41004f36187693a52846881269bea7f0";
   const MY_URL = "https://api.edamam.com/api/nutrition-details"
 
   const fetchData = async (ingr) => {
@@ -53,7 +56,14 @@ function App() {
   }, [wordSubmitted])
   
   return (
-    <div>
+
+<div className="App">
+<div className="container">
+<video autoPlay muted loop>
+ <source src={video} type="video/mp4" />
+</video>
+</div>
+
       {stateLoader && <LoaderPage />}
 
       <h1>Nutrition Analysis</h1>

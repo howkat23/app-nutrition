@@ -1,0 +1,19 @@
+video {
+    object-fit: cover;  
+    width: 100vw;  
+    height: 100vh;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    z-index: -1;  
+  }
+
+  .App {
+    background-color: #EF9595;
+  }
+
+  h1 {
+    font-family: 'Crimson Text', serif;
+    color: blue;
+    font-size: 30px;
+  }
