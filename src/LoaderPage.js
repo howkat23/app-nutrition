@@ -7,3 +7,6 @@ export const LoaderPage = () => {
         </div>
     )
 }
+
+
+export default LoaderPage;

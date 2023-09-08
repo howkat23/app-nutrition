@@ -5,3 +5,5 @@ export const Nutrition = ({ label, quantity, unit }) => {
         </div>
     )
 }
+
+export default Nutrition;

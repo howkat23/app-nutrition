@@ -1,7 +1,7 @@
 import { useEffect, useState  } from 'react';
 import { Nutrition } from './Nutrition';
 import { LoaderPage } from './LoaderPage';
-import './App'
+import './App.css'
 import video from './orange.mp4';
 
 
@@ -15,8 +15,10 @@ function App() {
   
   const MY_ID = "dc43f5c9";
   const MY_KEY = "41004f36187693a52846881269bea7f0";
-  const MY_URL = "https://api.edamam.com/api/nutrition-details"
-
+  const MY_URL = "https://api.edamam.com/api/nutrition-details";
+ 
+  
+  
   const fetchData = async (ingr) => {
     setStateLoader(true);
 
@@ -54,7 +56,11 @@ function App() {
         fetchData(ingr);
       }
   }, [wordSubmitted])
+
+  const timer = setTimeout(() => setStateLoader(false), 3000);
+  return () => clearTimeout(timer);
   
+
   return (
 
 <div className="App">
